@@ -8,6 +8,14 @@ let &t_EI = "\e[2 q"
 " Line Numbers
 set number
 
+" Make search better
+set showmatch
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+
 " Whitespace characters
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
