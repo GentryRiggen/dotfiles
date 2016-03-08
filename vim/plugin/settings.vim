@@ -1,3 +1,6 @@
+" Mouse (cause I am a noob)
+set mouse=a
+
 " Insert Cursor
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
