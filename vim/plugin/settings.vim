@@ -6,7 +6,7 @@ let &t_EI = "\e[2 q"
 set number
 
 " Whitespace characters
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
 
 " Specific Language tabbing
