@@ -9,6 +9,15 @@ set number
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
 
+"Clipboard
+set clipboard=unnamed
+
+"Syntax highlighting
+syntax enable
+
+" Status Line
+set laststatus=2
+
 " Specific Language tabbing
 augroup language_tabbing
     autocmd!
