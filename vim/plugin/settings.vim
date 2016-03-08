@@ -34,3 +34,6 @@ augroup END
 let g:airline#extensions#whitespace#enabled=0
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" Color scheme
+colorscheme Tomorrow-Night-Bright
