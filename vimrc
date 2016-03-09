@@ -29,6 +29,7 @@ Plugin 'mxw/vim-jsx'
 Bundle 'suan/vim-instant-markdown'
 Plugin 'moll/vim-node'
 Plugin 'helino/vim-json'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
