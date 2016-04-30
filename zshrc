@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gentryriggen/.oh-my-zsh
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
