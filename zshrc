@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=$PATH:~/.node_modules/bin
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -88,3 +87,4 @@ export NVM_DIR="/Users/gentryriggen/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:~/.npm-packages/bin
