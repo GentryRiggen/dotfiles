@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH=$PATH:~/.node_modules/bin
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
