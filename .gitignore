@@ -2,5 +2,6 @@ vim/bundle
 vim/plugged
 vim/colors
 vim/.netrwhist
+vim/backup
 .DS_Store
 .idea

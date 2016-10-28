@@ -88,3 +88,4 @@ export NVM_DIR="/Users/gentryriggen/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:~/.npm-packages/bin
+export PATH="/usr/local/sbin:$PATH"
