@@ -40,7 +40,7 @@ set number
 " Whitespace characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set tabstop=4
-set listchars=tab:>-,trail:-
+set listchars=nbsp:☠,tab:▸␣,trail:~,extends:>,precedes:<,space:␣
 set list
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
