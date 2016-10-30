@@ -12,6 +12,7 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter'
 
 " Add plugins to &runtimepath
 call plug#end()
