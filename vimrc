@@ -35,8 +35,10 @@ syntax on
 colorscheme Tomorrow-Night-Bright
 let g:airline_theme='simple'
 
-" NERD TREE toggle
+" NERD TREE
 map <C-n> :NERDTreeToggle<CR>
+map <C-m> :NERDTreeFind<CR>
+let g:NERDTreeWinSize=45
 
 " Line numbers
 set number
@@ -82,4 +84,4 @@ let mapleader=","
 " choose buffer faster
 map <leader>s :bnext<CR>
 map <leader>a :bprev<CR>
-map <leader>bd :bdel<CR>
+map <leader>d :bdel<CR>
