@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'joshdick/onedark.vim'
+Plug 'nathanbuchar/atom-one-dark-terminal'
 
 " Add plugins to &runtimepath
 call plug#end()
