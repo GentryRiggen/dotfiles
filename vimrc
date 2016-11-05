@@ -13,6 +13,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
+Plug 'joshdick/onedark.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -32,8 +33,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 " THEME
 syntax on
-colorscheme Tomorrow-Night-Bright
-let g:airline_theme='simple'
+colorscheme onedark
+let g:airline_theme='onedark'
 
 " NERD TREE
 map <C-n> :NERDTreeToggle<CR>
