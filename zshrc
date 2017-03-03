@@ -68,3 +68,13 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# TextEdit default editor
+export EDITOR=/Applications/TextEdit.app/Contents/MacOS/TextEdit
+
+
+
+
+
+
+
+curl http://wttr.in/Colorado+Springs
