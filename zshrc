@@ -1,13 +1,13 @@
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="spaceship"
-SPACESHIP_RUBY_SHOW=false
-SPACESHIP_NVM_SHOW=true
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="async"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,21 +53,47 @@ SPACESHIP_NVM_SHOW=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
-
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vendor/bin:/Applications/MAMP/Library/bin:/Users/griggen/Library/ant/bin:/Users/griggen/Library/maven/bin"
 source $ZSH/oh-my-zsh.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH=$PATH:~/.npm-packages/bin
-export PATH="/usr/local/sbin:$PATH"
+# User configuration
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gcam="gca --all"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+autoload -U promptinit; promptinit
+prompt pure
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin
+export PATH="/usr/local/sbin:$PATH"
