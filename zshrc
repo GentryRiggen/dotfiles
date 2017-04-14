@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -67,4 +66,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
