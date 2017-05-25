@@ -92,6 +92,10 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-snazzy',
+    "hyperline",
+    "hypercwd",
+    "hyperterm-dibdabs",
+    "hyperterm-cursor",
   ],
 
   // in development, you can create a directory under
