@@ -96,6 +96,7 @@ module.exports = {
     "hypercwd",
     "hyperterm-dibdabs",
     "hyperterm-cursor",
+    "hyperpower"
   ],
 
   // in development, you can create a directory under
