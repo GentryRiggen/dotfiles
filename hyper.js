@@ -19,8 +19,7 @@ module.exports = {
     // terminal background color
     backgroundColor: '#252525',
     // border color (window, tabs)
-    borderColor: 'rgba(248,28,229,0.8)',
-    borderWidth: 2,
+    borderColor: '#00aeee',
     // custom css to embed in the main window
     css: '',
     // custom css to embed in the terminal window
