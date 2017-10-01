@@ -5,7 +5,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 14,
     // font family with optional fallbacks
     fontFamily: 'Hack, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
@@ -19,7 +19,8 @@ module.exports = {
     // terminal background color
     backgroundColor: '#252525',
     // border color (window, tabs)
-    borderColor: '#333',
+    borderColor: 'rgba(248,28,229,0.8)',
+    borderWidth: 2,
     // custom css to embed in the main window
     css: '',
     // custom css to embed in the terminal window
