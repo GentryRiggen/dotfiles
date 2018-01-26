@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gcam="gca --all"
+alias gcam="gca -m"
 alias gsm="git smart-pull"
 
 export NVM_DIR="$HOME/.nvm"
