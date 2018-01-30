@@ -92,13 +92,9 @@ export NVM_DIR="$HOME/.nvm"
 autoload -U promptinit; promptinit
 prompt pure
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin
 export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:~/Library/Android/sdk"
+export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
