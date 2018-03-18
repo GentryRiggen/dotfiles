@@ -100,3 +100,4 @@ export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
 export PATH="$HOME/.fastlane/bin:$PATH"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
