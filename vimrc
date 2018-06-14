@@ -7,15 +7,12 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'joshdick/onedark.vim'
-Plug 'nathanbuchar/atom-one-dark-terminal'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -38,13 +35,8 @@ syntax on
 colorscheme onedark
 let g:airline_theme='onedark'
 
-" NERD TREE
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :NERDTreeFind<CR>
-let g:NERDTreeWinSize=45
-
 " Line numbers
-set number
+set relativenumber
 
 " Whitespace characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -88,3 +80,14 @@ let mapleader=","
 map <leader>s :bnext<CR>
 map <leader>a :bprev<CR>
 map <leader>d :bdel<CR>
+
+" File browser
+" let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+map <leader>p :Vexplore<CR>
+
+" ctags
+set tags=./tags,tags,.git/tags;
