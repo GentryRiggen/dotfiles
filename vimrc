@@ -17,6 +17,11 @@ Plug 'joshdick/onedark.vim'
 " Add plugins to &runtimepath
 call plug#end()
 
+" THEME
+syntax on
+colorscheme onedark
+let g:airline_theme='onedark'
+
 " change backup dir
 set backupdir=$VIMHOME/backup
 set directory=$VIMHOME/backup
@@ -29,11 +34,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-
-" THEME
-syntax on
-colorscheme onedark
-let g:airline_theme='onedark'
 
 " Line numbers
 set relativenumber
@@ -54,9 +54,7 @@ augroup language_tabbing
   autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
   autocmd Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
   autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype ruby       setlocal ts=2 sts=2 sw=2 expandtab
   autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype coffee     setlocal foldmethod=indent nofoldenable
 augroup END
 
 " Cursor
@@ -82,12 +80,11 @@ map <leader>a :bprev<CR>
 map <leader>d :bdel<CR>
 
 " File browser
-" let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-map <leader>p :Vexplore<CR>
+map - :Vexplore<CR>
 
 " ctags
-set tags=./tags,tags,.git/tags;
+set tags=./tags,tags,./.git/tags;
