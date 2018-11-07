@@ -85,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gcam="gca -m"
 alias gsm="git smart-pull"
+alias gsp="git smart-pull"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -94,6 +95,8 @@ autoload -U promptinit; promptinit
 prompt pure
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
 
