@@ -99,6 +99,8 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
+export SKIP_RESOURCES=1
+export APP_NO_CHECKOUT_HOOK=1
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
