@@ -1,6 +1,5 @@
+export PATH=$PATH:/usr/local/bin
 export ZSH=$HOME/.oh-my-zsh
-
-
 ZSH_THEME=""
 
 plugins=(git zsh-autosuggestions)
