@@ -8,6 +8,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
 alias kb="kubectl"
+source <(kubectl completion zsh)
+
 alias gcam="gca -m"
 alias gsm="git smart-pull"
 alias gsp="git smart-pull"
@@ -38,12 +40,6 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc'; fi
-
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -56,3 +52,9 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc'; fi
