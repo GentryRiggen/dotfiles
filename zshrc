@@ -7,9 +7,6 @@ plugins=(git zsh-autosuggestions autojump)
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
-alias kb="kubectl"
-source <(kubectl completion zsh)
-
 alias gcam="gca -m"
 alias gsm="git smart-pull"
 alias gsp="git smart-pull"
@@ -23,8 +20,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ENV VARS
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/
@@ -58,3 +57,16 @@ if [ -f '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ge
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc'; fi
+
+source <(kubectl completion zsh)
+alias kb="kubectl"
+
+listening() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
