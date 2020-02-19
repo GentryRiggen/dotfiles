@@ -20,7 +20,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ENV VARS
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_242`
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK/platform-tools
@@ -69,4 +70,15 @@ listening() {
     else
         echo "Usage: listening [pattern]"
     fi
+}
+
+export PATH=$PATH:~/dev/apache-maven-3.6.3/bin
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Helm/Kubernets
+export HELM_HOME=$HOME/.helm
+function helmet() {
+  CLUSTER=$(kubectl config current-context)
+  echo "Using cluster $CLUSTER"
+  helm "$@" --tls --tls-cert $HELM_HOME/tls/$CLUSTER/cert.pem --tls-key $HELM_HOME/tls/$CLUSTER/key.pem
 }
