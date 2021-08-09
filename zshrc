@@ -68,3 +68,8 @@ function helmet() {
 }
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export TRUSTED_APPS_DB_HOST=wdplayground
+export PD_DB_HOST=wdplayground
+export CCX_SWB_DB_HOST=wdplayground
+export PROXY_SWB_URL=http://wdPlayground:8080/swb-endpoint/swb/v1p0
+export PROXY_BASE_URL=http://localhost:8081/api
