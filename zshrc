@@ -51,6 +51,8 @@ load-nvmrc
 source <(kubectl completion zsh)
 alias kb="kubectl"
 
+alias st="side-tools"
+
 listening() {
     if [ $# -eq 0 ]; then
         sudo lsof -iTCP -sTCP:LISTEN -n -P
