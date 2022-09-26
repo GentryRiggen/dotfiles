@@ -53,6 +53,8 @@ alias kb="kubectl"
 
 alias st="side-tools"
 
+alias gbc="git branch --show-current | tr -d '\n' | pbcopy"
+
 listening() {
     if [ $# -eq 0 ]; then
         sudo lsof -iTCP -sTCP:LISTEN -n -P
