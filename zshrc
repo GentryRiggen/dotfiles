@@ -20,10 +20,6 @@ plugins=(git zsh-autosuggestions autojump)
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
-alias gcam="gca -m"
-alias gsm="git smart-pull"
-alias gsp="git smart-pull"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -49,11 +45,13 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 source <(kubectl completion zsh)
+
+# ALIASES
 alias kb="kubectl"
-
 alias st="side-tools"
-
 alias gbc="git branch --show-current | tr -d '\n' | pbcopy"
+alias gcam="gca -m"
+alias pn="pnpm"
 
 listening() {
     if [ $# -eq 0 ]; then
