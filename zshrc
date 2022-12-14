@@ -52,6 +52,7 @@ alias st="side-tools"
 alias gbc="git branch --show-current | tr -d '\n' | pbcopy"
 alias gcam="gca -m"
 alias pn="pnpm"
+alias gbclean="git for-each-ref --format '%(refname:short)' refs/heads | grep -v \"master\|main\" | xargs git branch -D"
 
 listening() {
     if [ $# -eq 0 ]; then
