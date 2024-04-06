@@ -74,3 +74,5 @@ if [ -f '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Us
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
