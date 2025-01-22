@@ -8,7 +8,13 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export ZSH="/Users/gentryriggen/.oh-my-zsh"
+if [ -d "/Users/gentryriggen" ]; then
+  export MY_HOME="/Users/gentryriggen"
+else
+  export MY_HOME="/Users/griggen"
+fi
+
+export ZSH="$MY_HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
@@ -60,14 +66,14 @@ export PROXY_SWB_URL=http://wdPlayground:8080/swb-endpoint/swb/v1p0
 export PROXY_BASE_URL=http://localhost:8081/api
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$MY_HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$MY_HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gentryriggen/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$MY_HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$MY_HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 
 autoload -U add-zsh-hook
 
-eval "$(/Users/gentryriggen/.local/bin/mise activate zsh)"
+eval "$($MY_HOME/.local/bin/mise activate zsh)"
