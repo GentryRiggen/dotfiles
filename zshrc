@@ -77,3 +77,6 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 autoload -U add-zsh-hook
 
 eval "$($MY_HOME/.local/bin/mise activate zsh)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
