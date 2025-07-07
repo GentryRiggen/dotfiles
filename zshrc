@@ -89,14 +89,33 @@ source $(brew --prefix)/etc/bash_completion.d/az
 
 # Azure helpers
 function azSwitch() {
-    if [ $# -eq 0 ]; then
-        echo "❌ Error: No subscription specified"
-        echo "📋 Usage: azSwitch <personal | jbrec-stage | jbrec-uat | jbrec-prod>"
-        echo "💡 Available subscriptions:"
+    # Check for --list flag
+    if [ "$1" = "--list" ] || [ "$1" = "-l" ]; then
+        echo "📋 Available Azure subscriptions:"
         echo "   • personal     - Personal Azure subscription"
         echo "   • jbrec-stage  - JBREC CP2-DEV environment"
         echo "   • jbrec-uat    - JBREC CP2-UAT environment"
-        echo "   • jbrec-prod   - JBREC CP2 production environment"
+        echo "   • jbrec-cp2-prod   - JBREC CP2 production environment"
+        echo "   • jbrec-non-prod - JBREC NON-PROD environment"
+        echo "   • jbrec-tools-prod - JBREC Tools production environment"
+        echo ""
+        echo "💡 Usage: azSwitch <subscription_name>"
+        echo "💡 Usage: azSwitch --list (or -l) to show this list"
+        return 0
+    fi
+    
+    if [ $# -eq 0 ]; then
+        echo "❌ Error: No subscription specified"
+        echo "📋 Usage: azSwitch <subscription_name>"
+        echo "💡 Use 'azSwitch --list' to see all available subscriptions"
+        echo ""
+        echo "📋 Available subscriptions:"
+        echo "   • personal     - Personal Azure subscription"
+        echo "   • jbrec-stage  - JBREC CP2-DEV environment"
+        echo "   • jbrec-uat    - JBREC CP2-UAT environment"
+        echo "   • jbrec-cp2-prod   - JBREC CP2 production environment"
+        echo "   • jbrec-non-prod - JBREC NON-PROD environment"
+        echo "   • jbrec-tools-prod - JBREC Tools production environment"
         return 1
     fi
     
@@ -133,11 +152,11 @@ function azSwitch() {
         az account set --subscription 33c0f6b9-6cc0-43b6-a2b5-14167d3b74b1
         local subscription_id="33c0f6b9-6cc0-43b6-a2b5-14167d3b74b1"
         
-    elif [ "$subscription_name" = "jbrec-prod" ]; then
+    elif [ "$subscription_name" = "jbrec-cp2-prod" ]; then
         echo "🏭 Switching to JBREC PRODUCTION environment..."
         echo "⚠️  WARNING: You are switching to PRODUCTION! ⚠️"
-        echo "📁 Sourcing environment file: $MY_HOME/az-profiles/jbrec-prod.sh"
-        source "$MY_HOME/az-profiles/jbrec-prod.sh"
+        echo "📁 Sourcing environment file: $MY_HOME/az-profiles/jbrec-cp2-prod.sh"
+        source "$MY_HOME/az-profiles/jbrec-cp2-prod.sh"
         echo "🔧 Setting Azure subscription to CP2 (jbrecclient.onmicrosoft.com)..."
         az login --tenant ad1df303-4824-4d47-aa4e-f36cac248cf7
         az account set --subscription bdc94a1f-27a0-41fa-9174-b24135ecbc05
@@ -152,9 +171,20 @@ function azSwitch() {
         az account set --subscription 2f63326e-e2de-41cf-afbd-1966b3c3a813
         local subscription_id="2f63326e-e2de-41cf-afbd-1966b3c3a813"
         
+    elif [ "$subscription_name" = "jbrec-tools-prod" ]; then
+        echo "�� Switching to JBREC Tools PRODUCTION environment..."
+        echo "⚠️  WARNING: You are switching to PRODUCTION! ⚠️"
+        echo "📁 Sourcing environment file: $MY_HOME/az-profiles/jbrec-tools-prod.sh"
+        source "$MY_HOME/az-profiles/jbrec-tools-prod.sh"
+        echo "🔧 Setting Azure subscription to Tools (jbrec.org)..."
+        az login --tenant ad1df303-4824-4d47-aa4e-f36cac248cf7
+        az account set --subscription 1bb4468e-177f-47af-bd72-19c39f30dc24
+        local subscription_id="1bb4468e-177f-47af-bd72-19c39f30dc24"
+
     else
         echo "❌ Error: Unknown subscription '$subscription_name'"
-        echo "📋 Available options: personal, jbrec-stage, jbrec-uat, jbrec-prod"
+        echo "📋 Available options: personal, jbrec-stage, jbrec-uat, jbrec-cp2-prod, jbrec-non-prod, jbrec-tools-prod"
+        echo "💡 Use 'azSwitch --list' to see all available subscriptions"
         return 1
     fi
 
