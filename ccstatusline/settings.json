@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      { "id": "1", "type": "model", "color": "cyan", "bold": true },
+      { "id": "2", "type": "separator", "text": " | " },
+      { "id": "3", "type": "context-percentage", "color": "brightYellow", "bold": true },
+      { "id": "4", "type": "context-bar", "color": "brightGreen" },
+      { "id": "5", "type": "separator", "text": " | " },
+      { "id": "6", "type": "session-cost", "color": "brightWhite" },
+      { "id": "7", "type": "separator", "text": " | " },
+      { "id": "8", "type": "output-speed", "color": "brightCyan" }
+    ],
+    [
+      { "id": "10", "type": "session-clock", "color": "brightBlack" },
+      { "id": "11", "type": "separator", "text": " | " },
+      { "id": "12", "type": "session-usage", "color": "brightMagenta" },
+      { "id": "13", "type": "separator", "text": " | " },
+      { "id": "14", "type": "weekly-usage", "color": "magenta" },
+      { "id": "15", "type": "separator", "text": " | " },
+      { "id": "16", "type": "block-timer", "color": "brightBlue" },
+      { "id": "17", "type": "separator", "text": " | " },
+      { "id": "18", "type": "reset-timer", "color": "blue" },
+      { "id": "19", "type": "separator", "text": " | " },
+      { "id": "40", "type": "tokens-total", "color": "brightBlack" },
+      { "id": "41", "type": "separator", "text": " | " },
+      { "id": "42", "type": "free-memory", "color": "brightBlack" }
+    ],
+    [
+      { "id": "20", "type": "git-branch", "color": "brightMagenta", "bold": true },
+      { "id": "21", "type": "separator", "text": " | " },
+      { "id": "22", "type": "git-changes", "color": "yellow" },
+      { "id": "23", "type": "separator", "text": " | " },
+      { "id": "24", "type": "git-insertions", "color": "brightGreen" },
+      { "id": "25", "type": "git-deletions", "color": "brightRed" },
+      { "id": "26", "type": "separator", "text": " | " },
+      { "id": "27", "type": "current-working-dir", "color": "brightBlack" }
+    ]
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 2,
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [""],
+    "separatorInvertBackground": [false],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false
+  }
+}
