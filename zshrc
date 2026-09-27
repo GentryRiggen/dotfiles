@@ -211,3 +211,6 @@ function azSwitch() {
     fi
 }
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+
+# Jim, personal assistant (~/dev/code/personal/jim). Always Remote Control, so the phone can join
+jim() { (cd "/Users/griggen/dev/code/personal/jim" && claude --remote-control Jim "$@"); }
